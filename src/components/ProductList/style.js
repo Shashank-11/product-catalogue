@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../constants/css'
 
 export const ListWrapper = styled.div`
   width: 100%;
@@ -12,13 +13,13 @@ export const ListHeader = styled.div`
   display: flex;
   select{
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     height: 40px;
     display: flex;
     position: absolute;
     right: 45px;
     border: 1px solid #2a3b4e;
+    font-weight: 600;
   }
 `
 export const CardContainer = styled.div`
@@ -31,10 +32,9 @@ export const ListContainer = styled.div`
   display: flex;
   margin: 10px;
   flex-direction: column;
-  -webkit-box-pack: end;
   justify-content: flex-end;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px 0px, rgba(0, 0, 0, 0.05) 0px 10px 10px 0px;
+  background-color: ${colors.white};
+  box-shadow: ${colors.cardShadow};
   max-width: 310px;
   min-width: 262px;
   height: 390px;
@@ -55,19 +55,18 @@ export const ProductLogo = styled.img`
 
 export const CardFooter = styled.div`
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  font-size: 16px;
-  -webkit-box-align: center;
+  font-size: 15px;
   align-items: center;
   padding: 1rem;
+  font-weight:700;
 `
 export const CardIndicator = styled.div`
-  background: ${props => props.isExclusive ? 'red' : 'green'};
+  background: ${props => props.isExclusive ? `${colors.brandRed}` : `${colors.brandGreen}`};
   min-width: 30px;
   margin: 10px;
   text-align: center;
-  color: #fff;
+  color: ${colors.white};
   padding:15px;
   width: ${props => props.isExclusive ? '70px' : '40px'};
 `

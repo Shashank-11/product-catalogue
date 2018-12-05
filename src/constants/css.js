@@ -5,13 +5,11 @@ export const layoutSizes = {
 
 export const colors = {
   white: '#fff',
-  BrandBackground: '#eef0f4',
-  gray79 :'#c9c9c9',
-  filterHeader : '#8935c0',
-  brandBlue : '#65309c',
-  darkVoilet: '#253b80',
-  errorColor: '#FCEBCD',
-  lightGray: '#ababab'
+  brandBackground: '#eef0f4',
+  gray79: '#c9c9c9',
+  cardShadow: 'rgba(0, 0, 0, 0.2) 0px 2px 3px 0px, rgba(0, 0, 0, 0.05) 0px 10px 10px 0px',
+  brandRed: '#e61606',
+  brandGreen: '#088e08'
 }
 
 export const gradients = {
