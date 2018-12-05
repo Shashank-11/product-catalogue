@@ -8,6 +8,9 @@ With the aim displaying product catalouge and filter them using sizes.
 - React
 - Styled Components
 
+### React
+Strandard react setup using create-react-app.
+
 ### Styled-components
 Styling for the app is done using Styled components.
 
