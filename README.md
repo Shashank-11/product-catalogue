@@ -2,7 +2,7 @@
 
 ## Overview
 This is a React application.
-With the aim displaying product catalouge and filter them using sizes.
+With the aim of displaying product catalouge and filter them using sizes.
 
 ## Tech Stack
 - React
