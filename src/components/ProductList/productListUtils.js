@@ -7,6 +7,7 @@ import product6 from '../../static/Products/product-6.jpg'
 import product7 from '../../static/Products/product-7.jpg'
 import product8 from '../../static/Products/product-8.jpg'
 
+// Products list
 export const Products = [
   {
     "index": 0,
@@ -82,8 +83,7 @@ export const Products = [
   }
 ]
 
-//Mapping product images based on product type
-
+// Mapping product images based on product type
 export const ProductImage = (image) =>{
   switch (image) {
     case 'product-1.jpg': 

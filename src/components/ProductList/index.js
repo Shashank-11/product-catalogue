@@ -6,9 +6,6 @@ import { ListWrapper, CardContainer, ListHeader } from './style'
 
 
 const initialState = {
-  error: false,
-  result: null,
-  loading: true,
   productsList: Products,
   filteredProducts: Products
 }
@@ -18,6 +15,7 @@ class ProductList extends Component {
   //Set initial states
   state = initialState
 
+  // Filter function to filter products list based on size values
   filterProducts(e){
     const sizeValue = e.target.value
     const { productsList } = this.state
@@ -29,6 +27,20 @@ class ProductList extends Component {
     }
   }  
 
+  // render component for filter dropdown
+  renderFilterSelect = () =>{
+    return(
+      <select onChange={(e) => this.filterProducts(e)}>
+        <option value="">Filter by size</option>
+        <option value="XS">Extra small</option>
+        <option value="S">Small</option>
+        <option value="M">Medium</option>
+        <option value="L">Large</option>
+        <option value="XL">Extra Large</option>
+      </select>
+    )
+  }
+
   render(){
     const { filteredProducts } = this.state
 
@@ -36,19 +48,12 @@ class ProductList extends Component {
       <ListWrapper>
         <ListHeader>
           <h1>Women's tops</h1>
-          <select onChange={(e) => this.filterProducts(e)}>
-            <option value="">Filter by size</option>
-            <option value="XS">Extra small</option>
-            <option value="S">Small</option>
-            <option value="M">Medium</option>
-            <option value="L">Large</option>
-            <option value="XL">Extra Large</option>
-          </select>
+          {this.renderFilterSelect()}
         </ListHeader>
         {filteredProducts && 
           <CardContainer>
             {filteredProducts.map((data, index) =>
-              <ProductCard key={index} productData={data} tabIndex="0" />
+              <ProductCard key={index} productData={data} />
             )}
           </CardContainer>  
         }
